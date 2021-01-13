@@ -1,2 +1,2 @@
 # charts
-Helm charts for Niord
+This is placeholder for future helm charts for Niord
