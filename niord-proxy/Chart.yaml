@@ -1,0 +1,6 @@
+apiVersion: v2
+name: niord-proxy
+description: A Helm chart for Niord Proxy (https://github.com/NiordOrg/niord-proxy)
+type: application
+version: 0.9
+appVersion: 2.0.0

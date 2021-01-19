@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "niord-proxy.fullname" . }}-test-connection"
+  labels:
+    {{- include "niord-proxy.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['{{ include "niord-proxy.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
